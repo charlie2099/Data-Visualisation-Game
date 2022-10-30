@@ -7,8 +7,9 @@ using UnityEngine.Networking;
 
 public class APIDataRequester : MonoBehaviour
 {
-    public static event Action<string, int> OnDataReceived;
+    public static event Action<City, string, int> OnDataReceived;
     [SerializeField] private string apiKey;
+    private City _requestedCity;
 
     public class Location // city
     {
@@ -41,12 +42,13 @@ public class APIDataRequester : MonoBehaviour
         public Data data { get; set; }
     }
 
-    private void OnEnable() => CitySelector.Instance.OnCitySelected += GetNewRequest;
-    private void OnDisable() => CitySelector.Instance.OnCitySelected -= GetNewRequest;
+    private void OnEnable() => CitySelector.OnCitySelected += GetNewRequest;
+    private void OnDisable() => CitySelector.OnCitySelected -= GetNewRequest;
 
-    public void GetNewRequest(City city) 
+    public void GetNewRequest(City city)
     {
-        StartCoroutine(GetRequest("https://api.waqi.info/feed/" + CityManager.Instance.CityDictionary[city] + "/?token=" + apiKey)); // 64e0d4bdf07eb3cfcc274a5a90d7f7ba7800565f
+        _requestedCity = city;
+        StartCoroutine(GetRequest("https://api.waqi.info/feed/" + CityManager.CityDictionary[_requestedCity] + "/?token=" + apiKey)); // 64e0d4bdf07eb3cfcc274a5a90d7f7ba7800565f
     }
 
     private IEnumerator GetRequest(string url)
@@ -59,14 +61,11 @@ public class APIDataRequester : MonoBehaviour
             {
                 case UnityWebRequest.Result.ConnectionError:
                 case UnityWebRequest.Result.DataProcessingError:
-                    Debug.LogError(string.Format("Something went wrong: {0}", webRequest.error));
+                    Debug.LogError($"Something went wrong: {webRequest.error}");
                     break;
                 case UnityWebRequest.Result.Success:
-                    Root coord = JsonConvert.DeserializeObject<Root>(webRequest.downloadHandler.text);
-                    //Debug.Log("City: <color=red>" + coord.data.city.name + "</color>");
-                    //Debug.Log("Time: <color=red>" + coord.data.time.s + "</color>");
-                    //Debug.Log("Air Quality Index: <color=red>" + coord.data.aqi + "</color>");
-                    OnDataReceived?.Invoke(coord.data.city.name, coord.data.aqi);
+                    Root root = JsonConvert.DeserializeObject<Root>(webRequest.downloadHandler.text);
+                    OnDataReceived?.Invoke(_requestedCity, root.data.city.name, root.data.aqi);
                     break;
             }
         }

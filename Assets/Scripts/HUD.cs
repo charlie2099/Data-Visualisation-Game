@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 
@@ -10,7 +9,7 @@ public class HUD : MonoBehaviour
     private void OnEnable() => APIDataRequester.OnDataReceived += UpdateUiOnAPIRequest;
     private void OnDisable() => APIDataRequester.OnDataReceived -= UpdateUiOnAPIRequest;
 
-    private void UpdateUiOnAPIRequest(string cityName, int cityAqi)
+    private void UpdateUiOnAPIRequest(City city, string cityName, int cityAqi)
     {
         cityNameText.text = "City: <color=red>" + cityName + "</color>";
         cityAQIText.text = "City AQI: <color=red>" + cityAqi + "</color>";

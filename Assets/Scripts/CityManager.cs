@@ -4,23 +4,21 @@ using UnityEngine;
 
 public class CityManager : MonoBehaviour
 {
-    public static CityManager Instance;
-    public Dictionary<City, string> CityDictionary = new Dictionary<City, string>();
+    public static Dictionary<City, string> CityDictionary = new();
 
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
+    private void OnEnable() => APIDataRequester.OnDataReceived += UpdateCityColour;
+    private void OnDisable() => APIDataRequester.OnDataReceived -= UpdateCityColour;
 
     private void Start()
     {
         foreach (var city in FindObjectsOfType<City>())
         {
-            //Debug.Log("City found: " + city.Data.cityName);
             CityDictionary.Add(city, city.Data.apiUrlReference);
         }
+    }
+    
+    private void UpdateCityColour(City city, string cityName, int aqi)
+    {
+        city.SetCityColourBasedOnAqi(aqi);
     }
 }

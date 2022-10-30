@@ -3,20 +3,11 @@ using UnityEngine;
 
 public class CitySelector : MonoBehaviour
 {
-    public event Action<City> OnCitySelected;
-    public static CitySelector Instance;
-    public City SelectedCity => _selectedCity;
+    public static event Action<City> OnCitySelected;
+    //public City SelectedCity => _selectedCity;
     
     [SerializeField] private Camera cam;
-    private City _selectedCity;
-
-    private void Awake()
-    {
-        if (Instance == null)
-        {
-            Instance = this;
-        }
-    }
+    //private City _selectedCity;
 
     private void Update()
     {
@@ -28,7 +19,7 @@ public class CitySelector : MonoBehaviour
                 {
                     var city = hitInfo.transform.GetComponent<City>();
                     OnCitySelected?.Invoke(city);
-                    _selectedCity = city;
+                    //_selectedCity = city;
                 }
             }
         }

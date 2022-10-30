@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace Test
+namespace Testing
 {
     public class APIManager : MonoBehaviour
     {
