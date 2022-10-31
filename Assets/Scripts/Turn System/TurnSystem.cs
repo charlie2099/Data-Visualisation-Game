@@ -36,6 +36,11 @@ public class TurnSystem : MonoBehaviour
     {
         current_turn = 1;
     }
+    private void Update()
+    {
+        this.CURRENT_TURN_TEXT_HOLDER.text = "Turn : " + current_turn.ToString();
+    }
+
 
     [SerializeField]
     public GameObject POPUP_SLIDER_MENU;
