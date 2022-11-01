@@ -32,6 +32,7 @@ public class TurnSystem : MonoBehaviour
     public TMP_Text PLAYER_2_SCORE_HOLDER;
     [SerializeField]
     TMP_Text WHAT_TO_DO;
+    public TextMeshProUGUI actualAqiText;
     
     //
     [NonSerialized]
@@ -48,6 +49,8 @@ public class TurnSystem : MonoBehaviour
     private void Awake()
     {
         current_turn = 1;
+        
+        actualAqiText.gameObject.SetActive(false);
     }
     private void Update()
     {

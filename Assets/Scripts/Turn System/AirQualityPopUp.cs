@@ -124,6 +124,7 @@ public class AirQualityPopUp : MonoBehaviour
                 //p2 wins
                 turn_sys.PLAYER_2_SCORE_HOLDER.text = turn_sys.p2_score.ToString();
                 textext.text = "P2 Wins";
+                //Debug.Log("Air Quality Index: " + turn_sys.choosen_states_air_quality);
             }
             else
             {
@@ -132,13 +133,20 @@ public class AirQualityPopUp : MonoBehaviour
                 //p2 wins
                 turn_sys.PLAYER_1_SCORE_HOLDER.text = turn_sys.p1_score.ToString();
                 textext.text = "P1 Wins";
+                //Debug.Log($"Air Quality Index: {turn_sys.choosen_states_air_quality}");
             }
         }
 
-
+        
+        turn_sys.actualAqiText.gameObject.SetActive(true);
+        turn_sys.actualAqiText.text = "Actual AQI: <color=red>" + turn_sys.choosen_states_air_quality + "</color>";
+        
         winwin.SetActive(true);
 
         yield return new WaitForSeconds(3f);
+        
+        turn_sys.actualAqiText.gameObject.SetActive(false);
+        turn_sys.actualAqiText.text = "Actual AQI: <color=red> 0</color>";
 
         //Next Turn
         turn_sys.nextTurn();
