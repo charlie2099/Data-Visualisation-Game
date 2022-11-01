@@ -1,5 +1,7 @@
 using Scriptables;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class City : MonoBehaviour
 {
@@ -26,10 +28,20 @@ public class City : MonoBehaviour
     private TurnSystem turn_system;
     public void OnMouseDown()
     {
-        arrange_Turn_System();
+        if(!isPointerOverUiElement())
+        {
+            arrange_Turn_System();
+        }
         //invoke_GUESSING_GAME();
     }
-
+    private bool isPointerOverUiElement()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
     public void arrange_Turn_System()
     {
         this.turn_system = GameObject.Find("Turn Manager").GetComponent<TurnSystem>();
