@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wales
   m_EditorClassIdentifier: 
   cityName: Narbert
-  apiUrlReference: narbert
+  apiUrlReference: manchester
   landmarkModel: {fileID: 0}

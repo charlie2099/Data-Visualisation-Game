@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Befordshire
   m_EditorClassIdentifier: 
   cityName: Befordshire
-  apiUrlReference: befordshire
+  apiUrlReference: manchester
   landmarkModel: {fileID: 0}

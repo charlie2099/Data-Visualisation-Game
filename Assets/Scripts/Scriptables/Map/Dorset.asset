@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dorset
   m_EditorClassIdentifier: 
   cityName: Bath
-  apiUrlReference: A189418
+  apiUrlReference: manchester
   landmarkModel: {fileID: 0}

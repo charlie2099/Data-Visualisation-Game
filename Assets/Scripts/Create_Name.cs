@@ -8,7 +8,7 @@ public class Create_Name : MonoBehaviour
     GameObject instantiated_gameobject;
     public void OnMouseOver()
     {
-        Debug.Log("Entering Mouse Over");
+        //Debug.Log("Entering Mouse Over");
         //GameObject instantiated_gameobject = Instantiate(name_prefab);
         if(instantiated_gameobject != null)
         {
