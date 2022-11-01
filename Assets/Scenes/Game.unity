@@ -747,16 +747,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f6a4b4fdd42b74dbddbb5d503206a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currently_busy: 0
   p1_active: 0
   p2_active: 0
+  p1_selecting: 0
+  p2_selecting: 0
   p1_score: 0
   p2_score: 0
   CURRENT_TURN_TEXT_HOLDER: {fileID: 2072573616}
   PLAYER_1_SCORE_HOLDER: {fileID: 1453075143}
   PLAYER_2_SCORE_HOLDER: {fileID: 56791889}
+  WHAT_TO_DO: {fileID: 882776040}
   p1_GUESS: 0
   p2_GUESS: 0
-  POPUP_SLIDER_MENU: {fileID: 2072573614}
+  Selector_Panel: {fileID: 0}
+  POPUP_SLIDER_MENU: {fileID: 3970829739406311938, guid: 30bf4e8fc16995b409c0026a861e14ed, type: 3}
+  quality_slider: {fileID: 0}
 --- !u!1 &484812392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,7 +1851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0.37377366, y: -0.0022289618, z: 0.0023584408, w: 0.92751426}
-  m_LocalPosition: {x: -28.9, y: 4.86, z: -3.42}
+  m_LocalPosition: {x: -28.55, y: 4.86, z: -3.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2122,11 +2128,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 470050515}
   - {fileID: 1924023861}
   - {fileID: 2082412173}
   - {fileID: 1187273048}
   - {fileID: 126893278}
-  - {fileID: 470050515}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3428,9 +3434,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 9035303402688512210}
   - {fileID: 543450652353421372}
   - {fileID: 752112534}
+  - {fileID: 9035303402688512210}
   - {fileID: 1723904533}
   m_Father: {fileID: 0}
   m_RootOrder: 4

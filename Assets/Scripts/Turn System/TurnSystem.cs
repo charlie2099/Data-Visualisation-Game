@@ -22,13 +22,14 @@ public class TurnSystem : MonoBehaviour
     public int p1_score;
     public int p2_score;
 
+    public int choosen_states_air_quality = 0;
     //UI
     [SerializeField]
     TMP_Text CURRENT_TURN_TEXT_HOLDER;
     [SerializeField]
-    TMP_Text PLAYER_1_SCORE_HOLDER;
+    public TMP_Text PLAYER_1_SCORE_HOLDER;
     [SerializeField]
-    TMP_Text PLAYER_2_SCORE_HOLDER;
+    public TMP_Text PLAYER_2_SCORE_HOLDER;
     [SerializeField]
     TMP_Text WHAT_TO_DO;
     
@@ -98,6 +99,33 @@ public class TurnSystem : MonoBehaviour
         Destroy(menu);
     }
 
+    public void nextTurn()
+    {
+        if(this.current_turn%2 == 0)
+        {
+            clear_all();
+            //this.p1_active = true;
+            this.current_turn++;
+        }
+        else if(this.current_turn%2 == 1)
+        {
+            clear_all();
+            //this.p2_active = true;
+            this.current_turn++;
+        }
+    }
+
+    public void clear_all()
+    {
+        this.currently_busy = false;
+        this.p1_active = false;
+        this.p2_active = false;
+        this.p1_selecting = false;
+        this.p2_selecting = false;
+        this.p1_GUESS = 0;
+        this.p2_GUESS = 0;
+        choosen_states_air_quality = 0;
+    }
 
         // player whoes turn first clicks and chooses the competitive province
         // -> SO turn cycle is p1 p2 , p2 p1 , p1 p2 ...
