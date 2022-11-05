@@ -126,6 +126,16 @@ public class AirQualityPopUp : MonoBehaviour
                 textext.text = "P2 Wins";
                 //Debug.Log("Air Quality Index: " + turn_sys.choosen_states_air_quality);
             }
+            else if((Mathf.Abs(turn_sys.p1_GUESS - turn_sys.choosen_states_air_quality) == Mathf.Abs(turn_sys.p2_GUESS - turn_sys.choosen_states_air_quality)))
+            {
+                //p2 wins
+                turn_sys.p2_score++;
+                turn_sys.p1_score++;
+                turn_sys.PLAYER_2_SCORE_HOLDER.text = turn_sys.p2_score.ToString();
+                turn_sys.PLAYER_1_SCORE_HOLDER.text = turn_sys.p1_score.ToString();
+                textext.text = "DRAW";
+                //Debug.Log("Air Quality Index: " + turn_sys.choosen_states_air_quality);
+            }
             else
             {
                 //p1 wins
