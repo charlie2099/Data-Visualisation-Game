@@ -72,7 +72,7 @@ public class City : MonoBehaviour
                 turn_system.p1_selecting = true;
                 turn_system.choosen_states_air_quality = this.cityAqi;
 
-                Debug.Log("Choosen State's Air Quality: " + turn_system.choosen_states_air_quality);
+                //Debug.Log("Choosen State's Air Quality: " + turn_system.choosen_states_air_quality);
             }
         }
     }
