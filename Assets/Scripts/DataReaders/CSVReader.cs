@@ -8,8 +8,7 @@ namespace Testing
     public class CSVReader : MonoBehaviour
     {
         [SerializeField] private TextAsset textAssetData;
-
-        [Serializable]
+        
         public class CityData
         {
             public int year;
@@ -27,16 +26,14 @@ namespace Testing
             public int totalWeaponPossession;
             public int totalOffences;
         }
-
-        [Serializable]
+        
         public class CityList
         {
             public List<CityData> cityDataList;
         }
-        public CityList myCityList = new CityList();
+        public static CityList CrimeDataset = new CityList();
 
         //private Dictionary<City, CityData> cityDictionary = new Dictionary<City, CityData>();
-
 
         private void Start()
         { 
@@ -49,11 +46,11 @@ namespace Testing
 
             const int NUM_OF_COLUMNS = 14;
             int tableSize = dataset.Length / NUM_OF_COLUMNS - 1; // ignore first row
-            myCityList.cityDataList = new List<CityData>(new CityData[tableSize]);
+            CrimeDataset.cityDataList = new List<CityData>(new CityData[tableSize]);
 
             for (int i = 0; i < tableSize; i++) // Reads column by column before moving to next row
             {
-                myCityList.cityDataList[i] = new CityData
+                CrimeDataset.cityDataList[i] = new CityData
                 {
                     year = int.Parse(dataset[NUM_OF_COLUMNS * (i + 1)]),
                     name = dataset[NUM_OF_COLUMNS * (i + 1) + 1],
@@ -72,13 +69,13 @@ namespace Testing
                 };
             }
 
-            // Prints the name of each city and it's total of homicides under the queried year and city name
+            /*// Prints the name of each city and it's total of homicides under the queried year and city name
             const int YEAR = 2002;
             const string CITYNAME = "Wiltshire";
-            foreach (var cityData in myCityList.cityDataList.Where(ctx => ctx.year == YEAR).Where(ctx => ctx.name == CITYNAME))
+            foreach (var cityData in CrimeDataset.cityDataList.Where(ctx => ctx.year == YEAR).Where(ctx => ctx.name == CITYNAME))
             {
                 Debug.Log($"From year: {cityData.year}, City Name: {cityData.name}, Total Homicides: {cityData.totalHomicides}");
-            }
+            }*/
             
             //int row = 1;
             //int column = 2;
