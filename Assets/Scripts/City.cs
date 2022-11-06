@@ -54,13 +54,13 @@ public class City : MonoBehaviour
         {
             if (turn_system.currently_busy == false)
             {
-                if (turn_system.current_turn % 2 == 0)
+                if (turn_system.current_turn % 2 == 1)
                 {
 
                     turn_system.p1_active = true;
 
                 }
-                else if (turn_system.current_turn % 2 == 1)
+                else if (turn_system.current_turn % 2 == 0)
                 {
 
                     turn_system.p2_active = true;

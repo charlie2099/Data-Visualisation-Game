@@ -39,11 +39,8 @@ public class AirQualityPopUp : MonoBehaviour
         this.TEXT1 = GameObject.Find("GOOD BAD UGLY").GetComponent<TMP_Text>();
         this.Slider1 = this.GetComponentInChildren<Slider>();
         this.turn_sys = GameObject.Find("Turn Manager").GetComponent<TurnSystem>();
-
         this.p1GUESS = GameObject.Find("p1choose").GetComponent<TMP_Text>();
-
         this.p2GUESS = GameObject.Find("p2choose").GetComponent<TMP_Text>();
-
         this.winwin = GameObject.Find("winwin");
         this.textext = GameObject.Find("win win").GetComponent<TMP_Text>();
 
@@ -86,6 +83,8 @@ public class AirQualityPopUp : MonoBehaviour
             {
                 turn_sys.p1_GUESS = (int)(Slider1.value * 100);
                 turn_sys.p1_selecting = false;
+                turn_sys.p1_active = false;
+                turn_sys.p2_active = false;
                 turn_sys.p2_selecting = true;
                 p1GUESS.text = "P1: " + ((int)(this.Slider1.value * 100)).ToString();
                 //Debug.Log(turn_sys.p1_GUESS);
@@ -95,6 +94,8 @@ public class AirQualityPopUp : MonoBehaviour
                 turn_sys.p2_GUESS = (int)(this.Slider1.value * 100);
                 turn_sys.p1_selecting = false;
                 turn_sys.p2_selecting = true;
+                turn_sys.p1_active = false;
+                turn_sys.p2_active = false;
                 p2GUESS.text = "P2: " + ((int)(this.Slider1.value * 100)).ToString();
                 //Debug.Log(turn_sys.p2_GUESS);
                 this.confirm_button.interactable = false;
