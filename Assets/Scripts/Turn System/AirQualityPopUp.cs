@@ -117,7 +117,6 @@ public class AirQualityPopUp : MonoBehaviour
 
         if (turn_sys.p1_GUESS != 0 && turn_sys.p2_GUESS != 0 && turn_sys.choosen_states_air_quality != 0)
         {
-            Debug.Log("SA");
             //Create Win State
             if (Mathf.Abs(turn_sys.p1_GUESS - turn_sys.choosen_states_air_quality) > Mathf.Abs(turn_sys.p2_GUESS - turn_sys.choosen_states_air_quality))
             {
@@ -150,14 +149,14 @@ public class AirQualityPopUp : MonoBehaviour
 
         
         turn_sys.actualAqiText.gameObject.SetActive(true);
-        turn_sys.actualAqiText.text = "Actual AQI: <color=red>" + turn_sys.choosen_states_air_quality + "</color>";
+        turn_sys.actualAqiText.text = "Actual Crime Rate: <color=red>" + turn_sys.choosen_states_air_quality + "</color>";
         
         winwin.SetActive(true);
 
         yield return new WaitForSeconds(3f);
         
         turn_sys.actualAqiText.gameObject.SetActive(false);
-        turn_sys.actualAqiText.text = "Actual AQI: <color=red> 0</color>";
+        turn_sys.actualAqiText.text = "Actual Crime Rate: <color=red> 0</color>";
 
         //Next Turn
         turn_sys.nextTurn();
