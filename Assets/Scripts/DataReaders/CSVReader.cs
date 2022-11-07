@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-namespace Testing
+namespace DataReaders
 {
+    /// <summary>
+    /// Responsible for reading the data from a given CSV file and writing it's contents
+    /// to the statically accessible "CrimeData" variable;
+    /// </summary>
     public class CSVReader : MonoBehaviour
     {
         [SerializeField] private TextAsset textAssetData;

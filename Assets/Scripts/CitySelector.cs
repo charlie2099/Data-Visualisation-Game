@@ -1,6 +1,10 @@
 ﻿using System;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for selecting a city upon a mouse press using raycasting
+/// and notifying other scripts of the city that was selected through an event.
+/// </summary>
 public class CitySelector : MonoBehaviour
 {
     public static event Action<City> OnCitySelected;

@@ -1,10 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using DataReaders;
 using UnityEngine;
 
+/// <summary>
+/// Stores a Dictionary of each city with it's corresponding API Url. 
+/// Responsible for receiving API data from the requester to update
+/// the colour of the city based on it's AQI.  
+/// </summary>
 public class CityManager : MonoBehaviour
 {
-    [SerializeField]
     public static Dictionary<City, string> CityDictionary = new();
 
     private void OnEnable() => APIDataRequester.OnDataReceived += UpdateCityColour;

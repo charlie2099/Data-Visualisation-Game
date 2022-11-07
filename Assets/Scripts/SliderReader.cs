@@ -1,9 +1,14 @@
 using System;
 using System.Linq;
+using DataReaders;
 using Testing;
 using TMPro;
 using UnityEngine;
 
+/// <summary>
+/// Responsible for capturing year data from the slider and updating
+/// it's corresponding Ui text accordingly.
+/// </summary>
 public class SliderReader : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI yearSliderText;
