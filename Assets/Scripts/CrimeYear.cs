@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -8,10 +9,8 @@ public class CrimeYear : MonoBehaviour
 {
     public static int YearOfCrime { get; private set; }
 
-    public void SetCrimeYear(float year)
-    {
-        YearOfCrime = (int)year;
-        Debug.Log($"Year: <color=orange>{YearOfCrime}</color>");
-        // invoke event?
-    }
+    private void Start() => YearOfCrime = 2002;
+
+    public void SetCrimeYear(float year) => YearOfCrime = (int)year;
+    
 }

@@ -38,10 +38,7 @@ namespace DataReaders
 
         //private Dictionary<City, CityData> cityDictionary = new Dictionary<City, CityData>();
 
-        private void Start()
-        { 
-            ReadCSV();   
-        }
+        private void Start() => ReadCSV();
 
         private void ReadCSV()
         {
@@ -71,40 +68,6 @@ namespace DataReaders
                     totalOffences = int.Parse(dataset[NUM_OF_COLUMNS * (i + 1) + 13])
                 };
             }
-
-            /*// Prints the name of each city and it's total of homicides under the queried year and city name
-            const int YEAR = 2002;
-            const string CITYNAME = "Wiltshire";
-            foreach (var cityData in CrimeDataset.cityDataList.Where(ctx => ctx.year == YEAR).Where(ctx => ctx.name == CITYNAME))
-            {
-                Debug.Log($"From year: {cityData.year}, City Name: {cityData.name}, Total Homicides: {cityData.totalHomicides}");
-            }*/
-            
-            //int row = 1;
-            //int column = 2;
-            //Debug.Log("ROW: " + row + ", COLUMN: " + column + ": " + dataset[NUM_OF_COLUMNS * row + column-1]);
-            
-            // myCityList contains every record in the dataset, where each item is a row number
-
-            /*Debug.Log("List item 0 name: " + myCityList.cityDataList[0].name);
-            Debug.Log("List item 1 name: " + myCityList.cityDataList[1].name);*/
-            
-            /*if (dataset.Contains("Avon"))
-            {
-                Debug.Log("hello");
-            }*/
-
-            /*if (myCityList.cityData.Contains("year"))
-            {
-                
-            }*/
-
-            /*Dictionary<string, CityData> cityDict = new Dictionary<string, CityData>();
-            CityData cityData = new CityData();
-            if (myCityList.cityData.Contains(cityDict["j"]))
-            {
-                
-            }*/
         }
     }
 }
