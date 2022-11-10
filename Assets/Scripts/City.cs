@@ -54,13 +54,13 @@ public class City : MonoBehaviour
         {
             if (turn_system.currently_busy == false)
             {
-                if (turn_system.current_turn % 2 == 0)
+                if (turn_system.current_turn % 2 == 1)
                 {
 
                     turn_system.p1_active = true;
 
                 }
-                else if (turn_system.current_turn % 2 == 1)
+                else if (turn_system.current_turn % 2 == 0)
                 {
 
                     turn_system.p2_active = true;
@@ -72,7 +72,7 @@ public class City : MonoBehaviour
                 turn_system.p1_selecting = true;
                 turn_system.choosen_states_air_quality = this.cityAqi;
 
-                Debug.Log("Choosen State's Air Quality: " + turn_system.choosen_states_air_quality);
+                //Debug.Log("Choosen State's Air Quality: " + turn_system.choosen_states_air_quality);
             }
         }
     }

@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
-namespace Testing
+namespace DataReaders
 {
+    /// <summary>
+    /// Responsible for reading the data from a given CSV file and writing it's contents
+    /// to the statically accessible "CrimeData" variable;
+    /// </summary>
     public class CSVReader : MonoBehaviour
     {
         [SerializeField] private TextAsset textAssetData;
-
-        [Serializable]
+        
         public class CityData
         {
             public int year;
@@ -27,21 +29,16 @@ namespace Testing
             public int totalWeaponPossession;
             public int totalOffences;
         }
-
-        [Serializable]
+        
         public class CityList
         {
-            public List<CityData> cityData;
+            public List<CityData> cityDataList;
         }
-        public CityList myCityList = new CityList();
+        public static CityList CrimeDataset = new CityList();
 
         //private Dictionary<City, CityData> cityDictionary = new Dictionary<City, CityData>();
 
-
-        private void Start()
-        { 
-            ReadCSV();   
-        }
+        private void Start() => ReadCSV();
 
         private void ReadCSV()
         {
@@ -49,12 +46,11 @@ namespace Testing
 
             const int NUM_OF_COLUMNS = 14;
             int tableSize = dataset.Length / NUM_OF_COLUMNS - 1; // ignore first row
-            //myCityList.cityData = new CityData[tableSize];
-            myCityList.cityData = new List<CityData>(new CityData[tableSize]);
+            CrimeDataset.cityDataList = new List<CityData>(new CityData[tableSize]);
 
-            for (int i = 0; i < tableSize; i++) // Reads column by column for each row
+            for (int i = 0; i < tableSize; i++) // Reads column by column before moving to next row
             {
-                myCityList.cityData[i] = new CityData
+                CrimeDataset.cityDataList[i] = new CityData
                 {
                     year = int.Parse(dataset[NUM_OF_COLUMNS * (i + 1)]),
                     name = dataset[NUM_OF_COLUMNS * (i + 1) + 1],
@@ -72,27 +68,6 @@ namespace Testing
                     totalOffences = int.Parse(dataset[NUM_OF_COLUMNS * (i + 1) + 13])
                 };
             }
-
-            int row = 1;
-            int column = 2;
-            Debug.Log("ROW: " + row + ", COLUMN: " + column + ": "+ dataset[NUM_OF_COLUMNS * (row-1 + 1) + column-1]);
-            
-            /*if (dataset.Contains("Avon"))
-            {
-                Debug.Log("hello");
-            }*/
-
-            /*if (myCityList.cityData.Contains("year"))
-            {
-                
-            }*/
-
-            /*Dictionary<string, CityData> cityDict = new Dictionary<string, CityData>();
-            CityData cityData = new CityData();
-            if (myCityList.cityData.Contains(cityDict["j"]))
-            {
-                
-            }*/
         }
     }
 }

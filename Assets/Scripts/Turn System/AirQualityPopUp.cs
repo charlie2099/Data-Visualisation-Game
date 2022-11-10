@@ -39,11 +39,8 @@ public class AirQualityPopUp : MonoBehaviour
         this.TEXT1 = GameObject.Find("GOOD BAD UGLY").GetComponent<TMP_Text>();
         this.Slider1 = this.GetComponentInChildren<Slider>();
         this.turn_sys = GameObject.Find("Turn Manager").GetComponent<TurnSystem>();
-
         this.p1GUESS = GameObject.Find("p1choose").GetComponent<TMP_Text>();
-
         this.p2GUESS = GameObject.Find("p2choose").GetComponent<TMP_Text>();
-
         this.winwin = GameObject.Find("winwin");
         this.textext = GameObject.Find("win win").GetComponent<TMP_Text>();
 
@@ -53,7 +50,7 @@ public class AirQualityPopUp : MonoBehaviour
         //Slider volume change
         Slider1.onValueChanged.AddListener(delegate { play_sound_on_slider_change(); });
     }
-
+    //
     private void play_sound_on_slider_change()
     {
         AudioSource audiosource1 = GameObject.Find("Button Source").GetComponent<AudioSource>();
@@ -86,6 +83,8 @@ public class AirQualityPopUp : MonoBehaviour
             {
                 turn_sys.p1_GUESS = (int)(Slider1.value * 100);
                 turn_sys.p1_selecting = false;
+                turn_sys.p1_active = false;
+                turn_sys.p2_active = false;
                 turn_sys.p2_selecting = true;
                 p1GUESS.text = "P1: " + ((int)(this.Slider1.value * 100)).ToString();
                 //Debug.Log(turn_sys.p1_GUESS);
@@ -95,6 +94,8 @@ public class AirQualityPopUp : MonoBehaviour
                 turn_sys.p2_GUESS = (int)(this.Slider1.value * 100);
                 turn_sys.p1_selecting = false;
                 turn_sys.p2_selecting = true;
+                turn_sys.p1_active = false;
+                turn_sys.p2_active = false;
                 p2GUESS.text = "P2: " + ((int)(this.Slider1.value * 100)).ToString();
                 //Debug.Log(turn_sys.p2_GUESS);
                 this.confirm_button.interactable = false;
@@ -116,7 +117,6 @@ public class AirQualityPopUp : MonoBehaviour
 
         if (turn_sys.p1_GUESS != 0 && turn_sys.p2_GUESS != 0 && turn_sys.choosen_states_air_quality != 0)
         {
-            Debug.Log("SA");
             //Create Win State
             if (Mathf.Abs(turn_sys.p1_GUESS - turn_sys.choosen_states_air_quality) > Mathf.Abs(turn_sys.p2_GUESS - turn_sys.choosen_states_air_quality))
             {
@@ -149,14 +149,14 @@ public class AirQualityPopUp : MonoBehaviour
 
         
         turn_sys.actualAqiText.gameObject.SetActive(true);
-        turn_sys.actualAqiText.text = "Actual AQI: <color=red>" + turn_sys.choosen_states_air_quality + "</color>";
+        turn_sys.actualAqiText.text = "Actual Crime Rate: <color=red>" + turn_sys.choosen_states_air_quality + "</color>";
         
         winwin.SetActive(true);
 
         yield return new WaitForSeconds(3f);
         
         turn_sys.actualAqiText.gameObject.SetActive(false);
-        turn_sys.actualAqiText.text = "Actual AQI: <color=red> 0</color>";
+        turn_sys.actualAqiText.text = "Actual Crime Rate: <color=red> 0</color>";
 
         //Next Turn
         turn_sys.nextTurn();

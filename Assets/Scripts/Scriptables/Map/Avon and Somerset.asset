@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1532342885b103429f54fd0196eedf6, type: 3}
-  m_Name: Cornwall
+  m_Name: Avon and Somerset
   m_EditorClassIdentifier: 
-  cityName: Devon and Cornwall
-  apiUrlReference: manchester
+  cityName: Avon and Somerset
+  apiUrlReference: bristol
   landmarkModel: {fileID: 0}
