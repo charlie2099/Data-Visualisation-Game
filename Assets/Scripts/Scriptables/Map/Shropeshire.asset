@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1532342885b103429f54fd0196eedf6, type: 3}
   m_Name: Shropeshire
   m_EditorClassIdentifier: 
-  cityName: Shropeshire
+  cityName: West MErcia
   apiUrlReference: manchester
   landmarkModel: {fileID: 0}
