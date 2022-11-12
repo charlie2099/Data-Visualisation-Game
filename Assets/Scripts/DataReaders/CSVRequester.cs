@@ -18,7 +18,7 @@ namespace DataReaders
 
         //Determines if the game loop is active, if not only pull data and show it in gradient.
         public bool Is_Game_Active;
-
+        public bool Is_Visualization_Active;
         //Canvas Controllers
         public Canvas Visualization_Canvas;
         public Canvas Game_Canvas;
@@ -43,6 +43,7 @@ namespace DataReaders
 
             //Activation of the game is false at the start
             Is_Game_Active = false;
+            Is_Visualization_Active = false;
 
         }
         private void DisplayCrimeDataOnCitySelect(City city)
@@ -162,6 +163,7 @@ namespace DataReaders
 
             //Actiavte Game Settings
             Is_Game_Active = true;
+            Is_Visualization_Active = false;
         }
 
         private void PressedWiewVisualizationButton()
@@ -171,6 +173,7 @@ namespace DataReaders
             Game_Canvas.renderMode = RenderMode.WorldSpace;
             Selection_Canvas.renderMode = RenderMode.WorldSpace;
             Is_Game_Active = false;
+            Is_Visualization_Active = true;
         }
     
          IEnumerator Alert()

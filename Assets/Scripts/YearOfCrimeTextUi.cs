@@ -8,9 +8,10 @@ using UnityEngine;
 public class YearOfCrimeTextUi : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI yearSliderText;
-
+    [SerializeField] private TextMeshProUGUI year2SliderText;
     public void UpdateSliderOutput(float sliderValue) // slider event
     {
         yearSliderText.text = "Year: " + sliderValue;
+        year2SliderText.text = "Year: " + sliderValue;
     }
 }
