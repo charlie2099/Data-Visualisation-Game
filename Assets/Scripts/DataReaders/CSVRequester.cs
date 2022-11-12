@@ -138,7 +138,7 @@ namespace DataReaders
                             var renderer = city.GetComponent<Renderer>();
 
                             //Using normalization get the gradient colour <3
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalKidnappings, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalKidnappings, 120)));
                         }
                         break;
                     case "Robbery":
@@ -150,7 +150,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalRobberies, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalRobberies, 5000)));
                         }
                         break;
                     case "Burglary":
@@ -162,7 +162,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDomesticBurglaries, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDomesticBurglaries, 50000)));
                         }
                         break;
                     case "Shoplifting":
@@ -174,7 +174,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalShoplifting, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalShoplifting, 15000)));
                         }
                         break;
                     case "Theft":
@@ -186,7 +186,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalTheft, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalTheft, 200000)));
                         }
                         break;
                     case "Arson":
@@ -198,7 +198,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalArson, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalArson, 1600)));
                         }
                         break;
                     case "Criminal damage":
@@ -210,7 +210,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalCriminalDamageOffences, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalCriminalDamageOffences, 30000)));
                         }
                         break;
                     case "Drug possession":
@@ -222,7 +222,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDrugOffences, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDrugOffences, 5000)));
                         }
                         break;
                     case "Weapon possession":
@@ -234,7 +234,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalWeaponPossession, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalWeaponPossession, 5000)));
                         }
                         break;
                     case "Total offences":
@@ -246,7 +246,7 @@ namespace DataReaders
                         else if (Is_Visualization_Active)
                         {
                             var renderer = city.GetComponent<Renderer>();
-                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalOffences, 30)));
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalOffences, 180000)));
                         }
                         break;
                 }
