@@ -26,6 +26,11 @@ namespace DataReaders
 
         //Game Manager
         public GameManager Game_Manager;
+        
+        //Gradient Initilization
+        Gradient gradient;
+        GradientColorKey[] colorKey;
+        GradientAlphaKey[] alphaKey;
 
         //Alert
         [SerializeField] public Canvas AlertCanvas;
@@ -45,7 +50,37 @@ namespace DataReaders
             Is_Game_Active = false;
             Is_Visualization_Active = false;
 
+            //Gradiant Coloring
+            gradient = new Gradient();
+
+            colorKey = new GradientColorKey[2];
+            colorKey[0].color = Color.green;
+            colorKey[0].time = 0.0f;
+            colorKey[1].color = Color.red;
+            colorKey[1].time = 1.0f;
+
+            alphaKey = new GradientAlphaKey[2];
+            alphaKey[0].alpha = 0.85f;
+            alphaKey[0].time = 0.0f;
+            alphaKey[1].alpha = 0.85f;
+            alphaKey[1].time = 1.0f;
+
+            gradient.SetKeys(colorKey, alphaKey);
+
         }
+
+        //Normalize data for gradient use <3
+        public float Normalization(float val, float max)
+        {
+            if (val > max)
+            {
+                return 1;
+            }
+            else
+            {
+                return val / max;
+            }
+        } 
         private void DisplayCrimeDataOnCitySelect(City city)
         {
             if (CrimeType.CrimeTypeName == null)
@@ -54,7 +89,6 @@ namespace DataReaders
                 StartCoroutine(Alert());
                 return;
             }
-
 
 
             foreach (var cityData in CSVReader.CrimeDataset.cityDataList.Where(ctx => ctx.year == CrimeYear.YearOfCrime).Where(ctx => ctx.name == city.Data.cityName))
@@ -68,12 +102,28 @@ namespace DataReaders
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalHomicides, cityData.name, "Homicides", cityData.year.ToString());
                         }
+                        else if (Is_Visualization_Active)
+                        {
+                            // Get the Renderer component
+                            var renderer = city.GetComponent<Renderer>();
+
+                            //Using normalization get the gradient colour <3
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalHomicides, 30)));
+                        }
                         break;
                     case "Harrassment":
                         Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Harassments: <color=orange>{cityData.totalHarrassments}</color>");
                         if (Is_Game_Active)
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalHarrassments, cityData.name, "Harrassment", cityData.year.ToString());
+                        }
+                        else if (Is_Visualization_Active)
+                        {
+                            // Get the Renderer component
+                            var renderer = city.GetComponent<Renderer>();
+
+                            //Using normalization get the gradient colour <3
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalHarrassments, 5000)));
                         }
                         break;
                     case "Kidnapping":
@@ -82,12 +132,25 @@ namespace DataReaders
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalKidnappings, cityData.name, "Kidnapping", cityData.year.ToString());
                         }
+                        else if (Is_Visualization_Active)
+                        {
+                            // Get the Renderer component
+                            var renderer = city.GetComponent<Renderer>();
+
+                            //Using normalization get the gradient colour <3
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalKidnappings, 30)));
+                        }
                         break;
                     case "Robbery":
                         Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Robberies: <color=orange>{cityData.totalRobberies}</color>");
                         if (Is_Game_Active)
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalRobberies, cityData.name, "Robbery", cityData.year.ToString());
+                        }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalRobberies, 30)));
                         }
                         break;
                     case "Burglary":
@@ -96,12 +159,22 @@ namespace DataReaders
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalDomesticBurglaries, cityData.name, "Burglary", cityData.year.ToString());
                         }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDomesticBurglaries, 30)));
+                        }
                         break;
                     case "Shoplifting":
                         Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Shoplifting: <color=orange>{cityData.totalShoplifting}</color>");
                         if (Is_Game_Active)
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalShoplifting, cityData.name, "Shoplifting", cityData.year.ToString());
+                        }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalShoplifting, 30)));
                         }
                         break;
                     case "Theft":
@@ -110,12 +183,22 @@ namespace DataReaders
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalTheft, cityData.name, "Theft", cityData.year.ToString());
                         }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalTheft, 30)));
+                        }
                         break;
                     case "Arson":
                         Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Arson offences: <color=orange>{cityData.totalArson}</color>");
                         if (Is_Game_Active)
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalArson, cityData.name, "Arson", cityData.year.ToString());
+                        }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalArson, 30)));
                         }
                         break;
                     case "Criminal damage":
@@ -124,12 +207,22 @@ namespace DataReaders
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalCriminalDamageOffences, cityData.name, "Criminal Damage Offences", cityData.year.ToString());
                         }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalCriminalDamageOffences, 30)));
+                        }
                         break;
                     case "Drug possession":
                         Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Drug Possession offences: <color=orange>{cityData.totalDrugOffences}</color>");
                         if (Is_Game_Active)
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalDrugOffences, cityData.name, "Drug Offences", cityData.year.ToString());
+                        }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDrugOffences, 30)));
                         }
                         break;
                     case "Weapon possession":
@@ -138,12 +231,22 @@ namespace DataReaders
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalWeaponPossession, cityData.name, "Weapon Possession", cityData.year.ToString());
                         }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalWeaponPossession, 30)));
+                        }
                         break;
                     case "Total offences":
                         Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Offences: <color=orange>{cityData.totalOffences}</color>");
                         if (Is_Game_Active)
                         {
                             Game_Manager.Player_Chooses_City_For_Game(cityData.totalOffences, cityData.name, "Total Offences", cityData.year.ToString());
+                        }
+                        else if (Is_Visualization_Active)
+                        {
+                            var renderer = city.GetComponent<Renderer>();
+                            renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalOffences, 30)));
                         }
                         break;
                 }
