@@ -9,7 +9,7 @@ public class City : MonoBehaviour
     int cityAqi;
     public CityData Data => cityData; 
     
-    [SerializeField] private CityData cityData;
+    [SerializeField] public CityData cityData;
     private Material _material;
 
     private void Awake() => _material = GetComponent<MeshRenderer>().material;
