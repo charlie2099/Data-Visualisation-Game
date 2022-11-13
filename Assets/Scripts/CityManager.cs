@@ -24,9 +24,9 @@ public class CityManager : MonoBehaviour
     
     private void UpdateCityColour(City city, string cityName, int aqi)
     {
-        city.SetCityColourBasedOnAqi(aqi);
+        //city.SetCityColourBasedOnAqi(aqi);
 
         //Start the guessing name after pulling air quality data.
-        city.invoke_GUESSING_GAME();
+        //city.invoke_GUESSING_GAME();
     }
 }

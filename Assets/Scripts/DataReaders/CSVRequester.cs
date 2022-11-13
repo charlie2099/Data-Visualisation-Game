@@ -272,13 +272,13 @@ namespace DataReaders
                             {
                                 
                                 var _All_Cities = GameObject.FindObjectsOfType(typeof(City));
-
+                                Debug.Log(_All_Cities.Length);
                                 for(int i = 0; i < _All_Cities.Length; i++)
                                 {
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalHomicides, 30)));
@@ -300,7 +300,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalHarrassments, 1000)));
@@ -321,7 +321,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalKidnappings, 80)));
@@ -342,7 +342,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalRobberies, 3000)));
@@ -363,7 +363,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDomesticBurglaries, 25000)));
@@ -384,7 +384,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalShoplifting, 12000)));
@@ -405,7 +405,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalTheft, 150000)));
@@ -426,7 +426,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalArson, 1600)));
@@ -447,7 +447,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalCriminalDamageOffences, 30000)));
@@ -468,7 +468,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDrugOffences, 5000)));
@@ -489,7 +489,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalWeaponPossession, 1000)));
@@ -510,7 +510,7 @@ namespace DataReaders
                                     // Get the Renderer component
                                     var renderer = _All_Cities[i].GetComponent<Renderer>();
 
-                                    if (_All_Cities[i].name == cityData.name)
+                                    if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
                                         renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalOffences, 180000)));
