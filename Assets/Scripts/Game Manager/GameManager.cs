@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -41,6 +42,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] public GameObject Selection_Panel;
     [SerializeField] public GameObject Results_Panel;
 
+    //Buttons
+    [SerializeField] public Button[] ButtonList;
+
     private void Start()
     {
         Results_Panel.SetActive(false);
@@ -61,6 +65,7 @@ public class GameManager : MonoBehaviour
     {
         if (_P1_Turn == true && _P2_Turn == false)
         {
+            Deactivate_and_Activate_Buttons();
             //Pass Turn
             _P1_Turn = false;
             _P2_Turn = true;
@@ -111,6 +116,7 @@ public class GameManager : MonoBehaviour
         P2_Crime_Count_Text_Holder.text = Selected_Crime_Count_Of_P2.ToString();
 
 
+
         if (Selected_Crime_Count_Of_P1 < Selected_Crime_Count_Of_P2)
         {
             //P1 Wins
@@ -144,7 +150,41 @@ public class GameManager : MonoBehaviour
         Results_Panel.SetActive(false);
 
 
+        //Re activate all ui components
+        Deactivate_and_Activate_Buttons();
     }
 
 
+    private void Deactivate_and_Activate_Buttons()
+    {
+        if (ButtonList[1].enabled)
+        {
+            for(int i = 0; i < ButtonList.Length; i++)
+            {
+                ButtonList[i].enabled = false;  
+            }
+        }
+        else
+        {
+            for (int i = 0; i < ButtonList.Length; i++)
+            {
+                ButtonList[i].enabled = true;
+            }
+        }
+        Deactivate_and_Activate_Slider();
+    }
+
+    //Slider Components
+    [SerializeField] public Slider Slider;
+    private void Deactivate_and_Activate_Slider()
+    {
+        if (Slider.enabled)
+        {
+            Slider.enabled = false; 
+        }
+        else
+        {
+            Slider.enabled = true;
+        }
+    }
 }

@@ -408,7 +408,7 @@ MonoBehaviour:
     Play guessing game for the crime''s rate
 
     4. Collect points according to
-    closest guess.
+    the fewest guess.
 
     5. Repeat'
   m_isRightToLeft: 0

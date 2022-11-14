@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: be02364ee3fa0584282293a5ae0b76e8, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &19047902
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: a82b79bc5db2efb49a23ab8e245617d4, type: 2}
   turn_system: {fileID: 0}
 --- !u!65 &26026008
@@ -901,6 +901,7 @@ GameObject:
   - component: {fileID: 150072505}
   - component: {fileID: 150072504}
   - component: {fileID: 150072503}
+  - component: {fileID: 150072506}
   m_Layer: 5
   m_Name: TotalOffencesButton
   m_TagString: Untagged
@@ -950,11 +951,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -998,7 +999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.827044, b: 0.827044, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1023,6 +1024,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 150072501}
   m_CullTransparentMesh: 1
+--- !u!114 &150072506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 150072501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &162740191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1176,7 @@ GameObject:
   - component: {fileID: 222823310}
   - component: {fileID: 222823309}
   - component: {fileID: 222823308}
+  - component: {fileID: 222823311}
   m_Layer: 5
   m_Name: KidnappingsButton
   m_TagString: Untagged
@@ -1284,6 +1299,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 222823306}
   m_CullTransparentMesh: 1
+--- !u!114 &222823311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 222823306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &232931933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,6 +1324,7 @@ GameObject:
   - component: {fileID: 232931937}
   - component: {fileID: 232931936}
   - component: {fileID: 232931935}
+  - component: {fileID: 232931938}
   m_Layer: 5
   m_Name: RobberiesButton
   m_TagString: Untagged
@@ -1345,11 +1374,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1418,6 +1447,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 232931933}
   m_CullTransparentMesh: 1
+--- !u!114 &232931938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232931933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &280022051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,8 +1514,22 @@ MonoBehaviour:
   P2_Selected_City: {fileID: 1090041374}
   Selection_Panel: {fileID: 614246105}
   Results_Panel: {fileID: 1041250856}
+  ButtonList:
+  - {fileID: 2005141591}
+  - {fileID: 1410675094}
+  - {fileID: 1738086792}
+  - {fileID: 232931935}
+  - {fileID: 864167963}
+  - {fileID: 455801150}
+  - {fileID: 1087918818}
+  - {fileID: 751655053}
+  - {fileID: 895914060}
+  - {fileID: 557391571}
+  - {fileID: 484847728}
+  - {fileID: 150072503}
   P1Win: {fileID: 763925232}
   P2Win: {fileID: 601059589}
+  Slider: {fileID: 1266855865}
 --- !u!1 &289848114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2532,6 +2588,7 @@ GameObject:
   - component: {fileID: 455801152}
   - component: {fileID: 455801151}
   - component: {fileID: 455801150}
+  - component: {fileID: 455801153}
   m_Layer: 5
   m_Name: ShopliftingsButton
   m_TagString: Untagged
@@ -2581,11 +2638,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2654,6 +2711,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 455801148}
   m_CullTransparentMesh: 1
+--- !u!114 &455801153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455801148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &480966793
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +2871,7 @@ GameObject:
   - component: {fileID: 484847730}
   - component: {fileID: 484847729}
   - component: {fileID: 484847728}
+  - component: {fileID: 484847731}
   m_Layer: 5
   m_Name: WeaponsPossessionButton
   m_TagString: Untagged
@@ -2850,11 +2921,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -2923,6 +2994,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 484847726}
   m_CullTransparentMesh: 1
+--- !u!114 &484847731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484847726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &516912753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,6 +3412,7 @@ GameObject:
   - component: {fileID: 557391573}
   - component: {fileID: 557391572}
   - component: {fileID: 557391571}
+  - component: {fileID: 557391574}
   m_Layer: 5
   m_Name: DrugsPossessionButton
   m_TagString: Untagged
@@ -3377,11 +3462,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -3450,6 +3535,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 557391569}
   m_CullTransparentMesh: 1
+--- !u!114 &557391574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557391569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &559004857
 GameObject:
   m_ObjectHideFlags: 0
@@ -3602,7 +3700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 2f947668e941b4e4892a2561bc0ce3bc, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &571568846
@@ -3990,6 +4088,7 @@ GameObject:
   - component: {fileID: 596020030}
   - component: {fileID: 596020029}
   - component: {fileID: 596020028}
+  - component: {fileID: 596020031}
   m_Layer: 5
   m_Name: WeaponsPossessionButton
   m_TagString: Untagged
@@ -4112,6 +4211,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596020026}
   m_CullTransparentMesh: 1
+--- !u!114 &596020031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596020026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &601059589
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,7 +4481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 66cf89ec80b56d44aab7c018bbd72c2a, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &616361327
@@ -4448,6 +4560,7 @@ GameObject:
   - component: {fileID: 628169593}
   - component: {fileID: 628169592}
   - component: {fileID: 628169591}
+  - component: {fileID: 628169594}
   m_Layer: 5
   m_Name: CriminalDamagesButton
   m_TagString: Untagged
@@ -4570,6 +4683,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628169589}
   m_CullTransparentMesh: 1
+--- !u!114 &628169594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 628169589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &648727285
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,6 +4920,7 @@ GameObject:
   - component: {fileID: 698326945}
   - component: {fileID: 698326944}
   - component: {fileID: 698326943}
+  - component: {fileID: 698326946}
   m_Layer: 5
   m_Name: BurglariesButton
   m_TagString: Untagged
@@ -4916,6 +5043,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698326941}
   m_CullTransparentMesh: 1
+--- !u!114 &698326946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698326941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -5100,6 +5240,7 @@ GameObject:
   - component: {fileID: 751655055}
   - component: {fileID: 751655054}
   - component: {fileID: 751655053}
+  - component: {fileID: 751655056}
   m_Layer: 5
   m_Name: ArsonsButton
   m_TagString: Untagged
@@ -5149,11 +5290,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5222,6 +5363,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751655051}
   m_CullTransparentMesh: 1
+--- !u!114 &751655056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751655051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &752112533
 GameObject:
   m_ObjectHideFlags: 0
@@ -5307,7 +5461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 311a8825c42161b449e8699e62f2fada, type: 2}
   turn_system: {fileID: 0}
 --- !u!65 &753305997
@@ -5636,6 +5790,7 @@ GameObject:
   - component: {fileID: 773971634}
   - component: {fileID: 773971633}
   - component: {fileID: 773971632}
+  - component: {fileID: 773971635}
   m_Layer: 5
   m_Name: ShopliftingsButton
   m_TagString: Untagged
@@ -5758,6 +5913,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773971630}
   m_CullTransparentMesh: 1
+--- !u!114 &773971635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773971630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &775094914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5925,6 +6093,7 @@ GameObject:
   - component: {fileID: 833479390}
   - component: {fileID: 833479389}
   - component: {fileID: 833479388}
+  - component: {fileID: 833479391}
   m_Layer: 5
   m_Name: TheftsButton
   m_TagString: Untagged
@@ -6047,6 +6216,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833479386}
   m_CullTransparentMesh: 1
+--- !u!114 &833479391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833479386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &835658642
 GameObject:
   m_ObjectHideFlags: 0
@@ -6366,6 +6548,7 @@ GameObject:
   - component: {fileID: 864167965}
   - component: {fileID: 864167964}
   - component: {fileID: 864167963}
+  - component: {fileID: 864167966}
   m_Layer: 5
   m_Name: BurglariesButton
   m_TagString: Untagged
@@ -6415,11 +6598,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6488,6 +6671,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864167961}
   m_CullTransparentMesh: 1
+--- !u!114 &864167966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864167961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &868176735
 GameObject:
   m_ObjectHideFlags: 0
@@ -6576,6 +6772,7 @@ GameObject:
   - component: {fileID: 895914062}
   - component: {fileID: 895914061}
   - component: {fileID: 895914060}
+  - component: {fileID: 895914063}
   m_Layer: 5
   m_Name: CriminalDamagesButton
   m_TagString: Untagged
@@ -6625,11 +6822,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6698,6 +6895,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 895914058}
   m_CullTransparentMesh: 1
+--- !u!114 &895914063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 895914058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &926300115
 GameObject:
   m_ObjectHideFlags: 0
@@ -7677,7 +7887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: a82b79bc5db2efb49a23ab8e245617d4, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &1016933955
@@ -7925,6 +8135,7 @@ GameObject:
   - component: {fileID: 1032248457}
   - component: {fileID: 1032248456}
   - component: {fileID: 1032248455}
+  - component: {fileID: 1032248458}
   m_Layer: 5
   m_Name: TotalOffencesButton
   m_TagString: Untagged
@@ -8047,6 +8258,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032248453}
   m_CullTransparentMesh: 1
+--- !u!114 &1032248458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032248453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1041250856
 GameObject:
   m_ObjectHideFlags: 0
@@ -8145,6 +8369,7 @@ GameObject:
   - component: {fileID: 1081284718}
   - component: {fileID: 1081284717}
   - component: {fileID: 1081284716}
+  - component: {fileID: 1081284719}
   m_Layer: 5
   m_Name: DrugsPossessionButton
   m_TagString: Untagged
@@ -8267,6 +8492,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081284714}
   m_CullTransparentMesh: 1
+--- !u!114 &1081284719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081284714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1087918816
 GameObject:
   m_ObjectHideFlags: 0
@@ -8279,6 +8517,7 @@ GameObject:
   - component: {fileID: 1087918820}
   - component: {fileID: 1087918819}
   - component: {fileID: 1087918818}
+  - component: {fileID: 1087918821}
   m_Layer: 5
   m_Name: TheftsButton
   m_TagString: Untagged
@@ -8328,11 +8567,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -8401,6 +8640,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087918816}
   m_CullTransparentMesh: 1
+--- !u!114 &1087918821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087918816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1090041372
 GameObject:
   m_ObjectHideFlags: 0
@@ -9156,7 +9408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: a129211d6e7005248a2b4de38556636c, type: 2}
   turn_system: {fileID: 0}
 --- !u!65 &1166007756
@@ -10134,7 +10386,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.43137255, g: 0.8039216, b: 0.81960785, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.2264151, g: 0.20078693, b: 0, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10538,7 +10790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: c5331f3dffffbc345b3d7b9e185afabe, type: 2}
   turn_system: {fileID: 0}
 --- !u!114 &1305892128
@@ -10773,6 +11025,7 @@ GameObject:
   - component: {fileID: 1410675096}
   - component: {fileID: 1410675095}
   - component: {fileID: 1410675094}
+  - component: {fileID: 1410675097}
   m_Layer: 5
   m_Name: HarrassmentsButton
   m_TagString: Untagged
@@ -10822,11 +11075,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -10895,6 +11148,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410675092}
   m_CullTransparentMesh: 1
+--- !u!114 &1410675097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1410675092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1441590058
 GameObject:
   m_ObjectHideFlags: 0
@@ -12160,7 +12426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: e06adf0e1a2631342a9d9fe0fc04f9c9, type: 2}
   turn_system: {fileID: 0}
 --- !u!1 &1647050679
@@ -12175,6 +12441,7 @@ GameObject:
   - component: {fileID: 1647050683}
   - component: {fileID: 1647050682}
   - component: {fileID: 1647050681}
+  - component: {fileID: 1647050684}
   m_Layer: 5
   m_Name: HarrassmentsButton
   m_TagString: Untagged
@@ -12297,6 +12564,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1647050679}
   m_CullTransparentMesh: 1
+--- !u!114 &1647050684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647050679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1655150239
 GameObject:
   m_ObjectHideFlags: 0
@@ -12309,6 +12589,7 @@ GameObject:
   - component: {fileID: 1655150243}
   - component: {fileID: 1655150242}
   - component: {fileID: 1655150241}
+  - component: {fileID: 1655150244}
   m_Layer: 5
   m_Name: ArsonsButton
   m_TagString: Untagged
@@ -12431,6 +12712,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655150239}
   m_CullTransparentMesh: 1
+--- !u!114 &1655150244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655150239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1664073435
 GameObject:
   m_ObjectHideFlags: 0
@@ -12643,7 +12937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 66cf89ec80b56d44aab7c018bbd72c2a, type: 2}
   turn_system: {fileID: 0}
 --- !u!1 &1703272145
@@ -12756,7 +13050,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: be02364ee3fa0584282293a5ae0b76e8, type: 2}
   turn_system: {fileID: 0}
 --- !u!1 &1723904532
@@ -12873,6 +13167,7 @@ GameObject:
   - component: {fileID: 1738086794}
   - component: {fileID: 1738086793}
   - component: {fileID: 1738086792}
+  - component: {fileID: 1738086795}
   m_Layer: 5
   m_Name: KidnappingsButton
   m_TagString: Untagged
@@ -12922,11 +13217,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -12995,6 +13290,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1738086790}
   m_CullTransparentMesh: 1
+--- !u!114 &1738086795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1738086790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &1739890643
 GameObject:
   m_ObjectHideFlags: 0
@@ -13205,7 +13513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: e06adf0e1a2631342a9d9fe0fc04f9c9, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &1750973441
@@ -14719,7 +15027,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 6a12fe5d0c78d7d438ec1113d06201ab, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &1917655564
@@ -15291,6 +15599,7 @@ GameObject:
   - component: {fileID: 2005141593}
   - component: {fileID: 2005141592}
   - component: {fileID: 2005141591}
+  - component: {fileID: 2005141594}
   m_Layer: 5
   m_Name: HomicidesButton
   m_TagString: Untagged
@@ -15340,11 +15649,11 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.42973477, g: 0.80388975, b: 0.8207547, a: 1}
+    m_NormalColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+    m_HighlightedColor: {r: 1, g: 0.6452724, b: 0, a: 1}
     m_PressedColor: {r: 0, g: 0, b: 0, a: 1}
     m_SelectedColor: {r: 0.4528302, g: 0, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0, g: 0, b: 0, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -15413,6 +15722,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005141589}
   m_CullTransparentMesh: 1
+--- !u!114 &2005141594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005141589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &2036943482
 GameObject:
   m_ObjectHideFlags: 0
@@ -15960,6 +16282,7 @@ GameObject:
   - component: {fileID: 2111380712}
   - component: {fileID: 2111380711}
   - component: {fileID: 2111380710}
+  - component: {fileID: 2111380713}
   m_Layer: 5
   m_Name: HomicidesButton
   m_TagString: Untagged
@@ -16082,6 +16405,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111380708}
   m_CullTransparentMesh: 1
+--- !u!114 &2111380713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111380708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!1 &2117248970
 GameObject:
   m_ObjectHideFlags: 0
@@ -21554,7 +21890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 39529b062a16865439c8b2e9802d2f12, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &2859689638919919430
@@ -24153,7 +24489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 729200ccdc231f34b84432960720a476, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &4336156737749590852
@@ -24508,7 +24844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 1fd35e67d2e16e64db0ad9838064c3ad, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &4489428192627307730
@@ -25297,7 +25633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: c339106cceefdf84ebf9a56de46039f8, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &4900103567062474690
@@ -25556,7 +25892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: da8fff537ee65d04daa010dceb1810e0, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &5128559245752268782
@@ -26381,7 +26717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: f8a39bcff85e5ae4e989b4ed9189cf5e, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &5256944044609748302
@@ -27848,7 +28184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 51ebbe5d3f0e20f4eb51cc1f98c2eaa3, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &5992013236687453123
@@ -28276,7 +28612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 479ada7d94918714490e52703729b082, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &6090986622818974062
@@ -28780,6 +29116,7 @@ GameObject:
   - component: {fileID: 6211409778993896270}
   - component: {fileID: 6211409778993896269}
   - component: {fileID: 6211409778993896268}
+  - component: {fileID: 6211409778993896271}
   m_Layer: 5
   m_Name: RobberiesButton
   m_TagString: Untagged
@@ -28902,6 +29239,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6211409778993896266}
   m_CullTransparentMesh: 1
+--- !u!114 &6211409778993896271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6211409778993896266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 3ecf8e64f66e2614da290b3d2f19ab46, type: 3}
 --- !u!33 &6218581007042578548
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -29649,7 +29999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: e6970c0a60b18f04b863c3be4a77827b, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &6669208351555896725
@@ -29712,7 +30062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: eee547ca81bc0a449a4cfa8fa91de2b3, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &6674255993337493810
@@ -30023,7 +30373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 72030ba88e9b9c34595adbaae54dda31, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &6772451763150470058
@@ -30487,7 +30837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: ca6a83ad283d00049a4efc46e1b20785, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7068327435946186515
@@ -30663,7 +31013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 4464bcfafe52fa54a895eb8e7c949b56, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7121556884328330662
@@ -30802,7 +31152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: f4b7049f42bb5ef489336321e01f7aed, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7132121924386234130
@@ -30933,7 +31283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 852f9151f8f51f149ac52e25ba637bff, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7223184934331570972
@@ -31132,7 +31482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: e9c8ad2845a175d4789752bf3936e8fa, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7343698437284142042
@@ -31966,7 +32316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: e4e9bbf02c7b0514895ef317b9b40228, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7891168601263882280
@@ -32086,7 +32436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: fe9dc35e5bfe2a14fac9610b72728e73, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7934055118272330251
@@ -32247,7 +32597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 17f45eed30547274e8d81b49261861f2, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &7977316235593876490
@@ -32459,7 +32809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: fd38606ccb2fa7b47a2259c50d5ab732, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8124930291671261409
@@ -32697,7 +33047,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: a89900601f9a9fd4b90b606594f18a6a, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8242304402543116035
@@ -32800,7 +33150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 8eaa1c8c1025dd946959840a96a5c8a8, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8283477024237379898
@@ -32926,7 +33276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 760e0368376551649959a90114995f4e, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8338647435113105128
@@ -32971,7 +33321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 8ba3e0e4abe04ae41b35b60175aa2888, type: 2}
   turn_system: {fileID: 0}
 --- !u!114 &8355714211280202095
@@ -33313,7 +33663,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 8c133252775dc6048813dd1d75957d3f, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8437449058237300520
@@ -33550,7 +33900,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: b97bd07ec64505f4b9a0b6c3a5eb4a3d, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8552929658575639821
@@ -33628,7 +33978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: f7b9d69f75a7f5a448e02ac61cae94fb, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8563131951902105729
@@ -33718,7 +34068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 3dcde9f5dfe39c64bbbf4e67b4a72644, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8576094757206542143
@@ -33804,7 +34154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: e0e7b9c9789cdbf4aa4efc20675accec, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8601389872761958419
@@ -33942,7 +34292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 8a4dadf914f1a0b4fb3710e9fbe7fd4f, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8630543576163750601
@@ -34012,7 +34362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: c0b1422e191c83c47b885f9eccdf5db1, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8645104054793290105
@@ -34082,7 +34432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: edc7ff7db46def54b8c3f27fd874f834, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8650489480109704013
@@ -34302,7 +34652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 70d04ba2012174d41aff18110b22ed5a, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8745242026877992744
@@ -34444,7 +34794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: c895eb0635fe0c2408b58c62c0f2d814, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8798156770945985535
@@ -34741,7 +35091,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 972e73f94059b5a48973374bb586af94, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8871691945838521535
@@ -35000,7 +35350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: a0fd921f2bc825a499ed0810332a164e, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &8958723276982446132
@@ -35113,7 +35463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 2f0bcc8784cf5914abca1564299b0f20, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &9025182667057515337
@@ -35256,7 +35606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 4cb8f36493585344f947a0f58bb64575, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &9074463338421375904
@@ -35350,7 +35700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: afce607313868e140915616e6293221d, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &9137792649929706638
@@ -35576,7 +35926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a54d4a4c85c248b21650d297e03c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cityAqi: 0
+  name: 
   cityData: {fileID: 11400000, guid: 3f46da813b83311488f49a4d8d1d4070, type: 2}
   turn_system: {fileID: 0}
 --- !u!64 &9198442720279487620
