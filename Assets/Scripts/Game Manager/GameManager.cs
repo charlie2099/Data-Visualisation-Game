@@ -149,7 +149,11 @@ public class GameManager : MonoBehaviour
         }
         //Calculate Win State
 
-        yield return new WaitForSeconds(3f);
+        GameObject.Find("(!)Next Button").GetComponent<Button>().onClick.AddListener(Next_Button_Pressed);
+    }
+
+    public void Next_Button_Pressed()
+    {
         _current_turn++;
 
         Crime_Name_Holder.text = "";
@@ -171,7 +175,6 @@ public class GameManager : MonoBehaviour
             _All_Cities[i].GetComponent<MeshCollider>().enabled = true;
         }
     }
-
 
     private void Deactivate_and_Activate_Buttons()
     {

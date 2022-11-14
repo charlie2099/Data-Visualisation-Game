@@ -450,7 +450,7 @@ namespace DataReaders
                                     if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
-                                        renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalCriminalDamageOffences, 30000)));
+                                        renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalCriminalDamageOffences, 50000)));
                                     }
 
                                 }
@@ -471,7 +471,7 @@ namespace DataReaders
                                     if (_All_Cities[i].GetComponent<City>().cityData.cityName == cityData.name)
                                     {
                                         //Using normalization get the gradient colour <3
-                                        renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDrugOffences, 5000)));
+                                        renderer.material.SetColor("_Color", gradient.Evaluate(Normalization(cityData.totalDrugOffences, 7000)));
                                     }
 
                                 }

@@ -792,6 +792,141 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 26026005}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &45981914
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 45981915}
+  - component: {fileID: 45981917}
+  - component: {fileID: 45981916}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &45981915
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45981914}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1944368196}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -16.6338, y: -5.198}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &45981916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45981914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: NEXT
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 43.25
+  m_fontSizeBase: 24
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &45981917
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45981914}
+  m_CullTransparentMesh: 1
 --- !u!1 &99758655
 GameObject:
   m_ObjectHideFlags: 0
@@ -953,9 +1088,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119991239}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 4.4622746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 13682199}
@@ -964,9 +1099,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1286, y: 3607}
+  m_SizeDelta: {x: 2560, y: 1440}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &119991241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1006,7 +1141,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &119991243
 Canvas:
   m_ObjectHideFlags: 0
@@ -1016,7 +1151,7 @@ Canvas:
   m_GameObject: {fileID: 119991239}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1826,13 +1961,14 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1025858015}
+  - {fileID: 1944368196}
   m_Father: {fileID: 1041250857}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.316833, y: 113.94614}
-  m_SizeDelta: {x: 1191.6099, y: 170.148}
+  m_AnchoredPosition: {x: 33.4166, y: 10.9787}
+  m_SizeDelta: {x: 1199.4104, y: 376.0831}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &289848116
 MonoBehaviour:
@@ -2257,8 +2393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.001282692, y: -60}
-  m_SizeDelta: {x: 698.52, y: 36.342697}
+  m_AnchoredPosition: {x: 4.9356, y: -64.94}
+  m_SizeDelta: {x: 785.5, y: 56.249}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348532855
 MonoBehaviour:
@@ -2310,7 +2446,7 @@ MonoBehaviour:
   m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -8442,8 +8578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.3101, y: -0.692}
-  m_SizeDelta: {x: 1160.5315, y: 138.3291}
+  m_AnchoredPosition: {x: -0.000032425, y: 0.000002861}
+  m_SizeDelta: {x: 1171.8357, y: 357.3636}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1025858016
 MonoBehaviour:
@@ -8494,15 +8630,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
+  m_fontSize: 51
   m_fontSizeBase: 30
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -15476,7 +15612,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 6a12fe5d0c78d7d438ec1113d06201ab, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Somerset's crime rate is
+    at 86%. Violent crime makes up 37.4% of all crimes reported in the county. The
+    total number of "violent crime" is 28.9k, and this number has increased by 16.2%
+    when compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &1917655564
@@ -15695,6 +15834,142 @@ Transform:
   m_Father: {fileID: 1049859384}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1944368195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1944368196}
+  - component: {fileID: 1944368200}
+  - component: {fileID: 1944368199}
+  - component: {fileID: 1944368198}
+  - component: {fileID: 1944368197}
+  m_Layer: 5
+  m_Name: (!)Next Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1944368196
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944368195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 45981915}
+  m_Father: {fileID: 289848115}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 533.7448, y: -226.6734}
+  m_SizeDelta: {x: 131.9304, y: 65.3468}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1944368197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944368195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1944368198}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1944368198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944368195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1944368199
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944368195}
+  m_CullTransparentMesh: 1
+--- !u!114 &1944368200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944368195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0368a187c5da14498cdb22ded415fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 1f0cd20fa726ba842acd3ff77b33df74, type: 3}
 --- !u!1 &1968557993
 GameObject:
   m_ObjectHideFlags: 0
@@ -22476,7 +22751,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 39529b062a16865439c8b2e9802d2f12, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Annual crime rate in Worcestershire county is 40.4, i.e. 40.4
+    crimes reported per annum per 1000 workday people. Compared to the national crime
+    rate, Worcestershire's crime rate is at 107%. Violent crime makes up 36.5% of
+    all crimes reported in the county.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &2859689638919919430
@@ -25077,7 +25355,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 729200ccdc231f34b84432960720a476, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Gloucestershire in 2021 was 52 crimes
+    per 1,000 people, and the most common crimes were violence and sexual offences,
+    which happened to roughly every 24 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &4336156737749590852
@@ -25434,7 +25714,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 1fd35e67d2e16e64db0ad9838064c3ad, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Most crimes, 20.9k crimes were violent crimes which is 31.5% of
+    all crimes committed in the area. Violent crime rate is at 76% of national crime
+    rate. Theft from the person crime was the fastest growing crime and it increased
+    by 46.8% over the last twelve months.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &4489428192627307730
@@ -26225,7 +26508,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: c339106cceefdf84ebf9a56de46039f8, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Most crimes, 37.3k crimes were violent crimes which is 41.9% of
+    all crimes committed in the area. Violent crime rate is at 98% of national crime
+    rate. Theft from the person crime was the fastest growing crime and it increased
+    by 61.2% over the last twelve months.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &4900103567062474690
@@ -26486,7 +26772,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: da8fff537ee65d04daa010dceb1810e0, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Leicester's crime rate is
+    at 111%. Violent crime makes up 38.1% of all crimes reported in the postcode
+    area. The total number of "violent crime" is 41.1k, and this number has increased
+    by 12.2% when compared year-over-year in the period of October 2021 - September
+    2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &5128559245752268782
@@ -27313,7 +27603,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: f8a39bcff85e5ae4e989b4ed9189cf5e, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Hereford is the most dangerous medium-sized town in Herefordshire,
+    and is among the top 5 most dangerous overall out of Herefordshire's 211 towns,
+    villages, and cities. The overall crime rate in Hereford in 2021 was 93 crimes
+    per 1,000 people.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &5256944044609748302
@@ -28782,7 +29075,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 51ebbe5d3f0e20f4eb51cc1f98c2eaa3, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Most crimes, 9.5k crimes were violent crimes which is 34.3% of
+    all crimes committed in the area. Violent crime rate is at 97% of national crime
+    rate. Shoplifting crime was the fastest growing crime and it increased by 62.7%
+    over the last twelve months.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &5992013236687453123
@@ -29212,7 +29508,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 479ada7d94918714490e52703729b082, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Yorkshire's crime rate is
+    at 130%. Violent crime makes up 37.9% of all crimes reported in the region. The
+    total number of "violent crime" is 255k, and this number has increased by 9.9%
+    when compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &6090986622818974062
@@ -30601,7 +30900,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: e6970c0a60b18f04b863c3be4a77827b, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Most crimes, 11.7k crimes were violent crimes which is 33.8% of
+    all crimes committed in the area. Violent crime rate is at 104% of national crime
+    rate. Shoplifting crime was the fastest growing crime and it increased by 44.5%
+    over the last twelve months.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &6669208351555896725
@@ -30666,7 +30968,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: eee547ca81bc0a449a4cfa8fa91de2b3, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Cornwall's crime rate is
+    at 69%. Violent crime makes up 38.3% of all crimes reported in the county. The
+    total number of "violent crime" is 13.4k, and this number has increased by 5.7%
+    when compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &6674255993337493810
@@ -30979,7 +31284,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 72030ba88e9b9c34595adbaae54dda31, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The total number of "violent crime" is 12.1k, and this number
+    has increased by 20.5% when compared year-over-year in the period of October
+    2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &6772451763150470058
@@ -31445,7 +31752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: ca6a83ad283d00049a4efc46e1b20785, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: In total 23929 crimes occurred within 1 mile of Cumberland Market,
+    London, NW1 3QE over the last 12 months February 2020 - January 2021.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7068327435946186515
@@ -31623,7 +31931,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 4464bcfafe52fa54a895eb8e7c949b56, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: ampshire is among the top 20 most dangerous counties in England,
+    Wales, and Northern Ireland. The overall crime rate in Hampshire in 2021 was
+    80 crimes per 1,000 people, and the most common crimes were violence and sexual
+    offences, which happened to roughly every 36 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7121556884328330662
@@ -31764,7 +32075,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: f4b7049f42bb5ef489336321e01f7aed, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: 'Huntingdon is the second most dangerous medium-sized town in
+    Cambridgeshire, and is among the top 20 most dangerous overall out of Cambridgeshire''s
+    262 towns, villages, and cities. The overall crime rate in Huntingdon in 2021
+    was 90 crimes per 1,000 people. This compares poorly to Cambridgeshire''s overall
+    crime rate, coming in 24% higher than the Cambridgeshire rate of 73 per 1,000
+    residents. '
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7132121924386234130
@@ -31897,7 +32213,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 852f9151f8f51f149ac52e25ba637bff, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: In December 2021, Warwick had the worst crime rate in Warwickshire
+    for bicycle theft, with 4 crimes reported and a crime rate of 0.12 per 1,000
+    inhabitants. August 2019 was also a bad month for Warwick residents, when it
+    was Warwickshire's most dangerous area for possession of weapons, recording 7
+    crimes at a rate of 0.21 per 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7223184934331570972
@@ -32098,7 +32418,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: e9c8ad2845a175d4789752bf3936e8fa, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The crime rate in Cambridgeshire is 6,141 incidents per 100,000
+    population, according to figures published by the ONS for the year ending July
+    2021. In the year ending July 2021, there were 40,357 incidents of crime, a 2,598
+    decrease in incidents when compared to the previous year.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7343698437284142042
@@ -32934,7 +33257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: e4e9bbf02c7b0514895ef317b9b40228, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Annual crime rate in your local area is 53.37 per thousand population.
+    This can be rated as 2 out of 10 or low crime leve
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7891168601263882280
@@ -33056,7 +33380,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: fe9dc35e5bfe2a14fac9610b72728e73, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Out of all of Wales's larger towns and cities, Cardiff is the
+    most dangerous. The next most dangerous is Newport, and Swansea comes in as third
+    most dangerous. There are safer parts of Wales, starting with Swansea which ranks
+    as the safest area in Wales, followed up by Newport in second place, and Cardiff
+    in third place.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &7934055118272330251
@@ -33433,7 +33761,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: fd38606ccb2fa7b47a2259c50d5ab732, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: In total 22799 crimes occurred within 1 mile of Middlesex Street,
+    London, E1 7EX over the last 12 months February 2020 - January 2021.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8124930291671261409
@@ -33673,7 +34002,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: a89900601f9a9fd4b90b606594f18a6a, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Buckinghamshire in 2021 was 72 crimes
+    per 1,000 people, and the most common crimes were violence and sexual offences,
+    which happened to roughly every 32 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8242304402543116035
@@ -33778,7 +34109,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 8eaa1c8c1025dd946959840a96a5c8a8, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Kent is among the top 10 most dangerous counties in England, Wales,
+    and Northern Ireland. The overall crime rate in Kent in 2021 was 87 crimes per
+    1,000 people, and the most common crimes were violence and sexual offences, which
+    happened to roughly every 44 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8283477024237379898
@@ -33906,7 +34240,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 760e0368376551649959a90114995f4e, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Derbyshire in 2021 was 81 crimes per
+    1,000 people, and the most common crimes were violence and sexual offences, which
+    happened to roughly every 39 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8338647435113105128
@@ -33953,7 +34289,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 8ba3e0e4abe04ae41b35b60175aa2888, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Wiltshire's crime rate is
+    at 78%. Violent crime makes up 34.3% of all crimes reported in the county. The
+    total number of "violent crime" is 18.7k, and this number has increased by 13.1%
+    when compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!114 &8355714211280202095
@@ -34297,7 +34636,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 8c133252775dc6048813dd1d75957d3f, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Most crimes, 857 crimes were violent crimes which is 42.3% of
+    all crimes committed in the area. Violent crime rate is at 60% of national crime
+    rate. Burglary crime was the fastest growing crime and it increased by 50.0%
+    over the last twelve months.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8437449058237300520
@@ -34536,7 +34878,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: b97bd07ec64505f4b9a0b6c3a5eb4a3d, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Berkshire's crime rate is
+    at 93%. Violent crime makes up 37.4% of all crimes reported in the county. The
+    total number of "violent crime" is 30.3k, and this number has increased by 10.0%
+    when compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8552929658575639821
@@ -34616,7 +34961,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: f7b9d69f75a7f5a448e02ac61cae94fb, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Annual crime rate in Shropshire county is 39, i.e. 39 crimes reported
+    per annum per 1000 workday people. Compared to the national crime rate, Shropshire's
+    crime rate is at 104%. Violent crime makes up 38.5% of all crimes reported in
+    the county.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8563131951902105729
@@ -34708,7 +35056,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 3dcde9f5dfe39c64bbbf4e67b4a72644, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Statistics show that in 2021, the crime rate was 77 crimes per
+    1000 people. This crime rate is higher than the national average by around 20%.
+    In terms of its violent crime rate, the region ranks 11th across England, Wales,
+    and Northern Ireland, with violent crime increasing by around 3.2% in the past
+    year.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8576094757206542143
@@ -34796,7 +35148,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: e0e7b9c9789cdbf4aa4efc20675accec, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Oxfordshire in 2021 was 68 crimes per
+    1,000 people, and the most common crimes were violence and sexual offences, which
+    happened to roughly every 29 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8601389872761958419
@@ -34936,7 +35290,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 8a4dadf914f1a0b4fb3710e9fbe7fd4f, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Lincolnshire's crime rate
+    is at 86%. Violent crime makes up 36.8% of all crimes reported in the county.
+    The total number of "violent crime" is 32.4k, and this number has decreased by
+    9.5% when compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8630543576163750601
@@ -35008,7 +35365,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: c0b1422e191c83c47b885f9eccdf5db1, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Sussex is the 22nd safest county in England, Wales, and Northern
+    Ireland. The overall crime rate in East Sussex in 2021 was 68 crimes per 1,000
+    people, and the most common crimes were violence and sexual offences, which happened
+    to roughly every 29 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8645104054793290105
@@ -35080,7 +35440,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: edc7ff7db46def54b8c3f27fd874f834, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Surrey's crime rate is at
+    67%. Violent crime makes up 31.5% of all crimes reported in the county. The total
+    number of "violent crime" is 27.9k, and this number has increased by 5.9% when
+    compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8650489480109704013
@@ -35302,7 +35665,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 70d04ba2012174d41aff18110b22ed5a, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Staffordshire in 2021 was 60 crimes
+    per 1,000 people, and the most common crimes were violence and sexual offences,
+    which happened to roughly every 30 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8745242026877992744
@@ -35446,7 +35811,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: c895eb0635fe0c2408b58c62c0f2d814, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Essex in 2021 was 81 crimes per 1,000
+    people, and the most common crimes were violence and sexual offences, which happened
+    to roughly every 39 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8798156770945985535
@@ -35745,7 +36112,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 972e73f94059b5a48973374bb586af94, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Norfolk is the 30th safest county in England, Wales, and Northern
+    Ireland. The overall crime rate in Norfolk in 2021 was 72 crimes per 1,000 people,
+    and the most common crimes were violence and sexual offences, which happened
+    to roughly every 37 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8871691945838521535
@@ -36006,7 +36376,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: a0fd921f2bc825a499ed0810332a164e, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Devon's crime rate is at
+    78%. Violent crime makes up 39.1% of all crimes reported in the county. The total
+    number of "violent crime" is 33.8k, and this number has increased by 7.6% when
+    compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &8958723276982446132
@@ -36266,7 +36639,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 4cb8f36493585344f947a0f58bb64575, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Compared to the national crime rate, Suffolk's crime rate is at
+    97%. Violent crime makes up 42.2% of all crimes reported in the county. The total
+    number of "violent crime" is 26.6k, and this number has increased by 12.7% when
+    compared year-over-year in the period of October 2021 - September 2022.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &9074463338421375904
@@ -36362,7 +36738,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: afce607313868e140915616e6293221d, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: Annual crime rate in Bedfordshire county is 34.8, i.e. 34.8 crimes
+    reported per annum per 1000 workday people. Compared to the national crime rate,
+    Bedfordshire's crime rate is at 92%. Violent crime makes up 32.7% of all crimes
+    reported in the county.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &9137792649929706638
@@ -36590,7 +36969,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   cityData: {fileID: 11400000, guid: 3f46da813b83311488f49a4d8d1d4070, type: 2}
-  About_City_Data: Crimes are realy dangerious.
+  About_City_Data: The overall crime rate in Nottinghamshire in 2021 was 76 crimes
+    per 1,000 people, and the most common crimes were violence and sexual offences,
+    which happened to roughly every 30 out of 1,000 residents.
   City_Special_Data_Text: {fileID: 1025858016}
   turn_system: {fileID: 0}
 --- !u!64 &9198442720279487620
