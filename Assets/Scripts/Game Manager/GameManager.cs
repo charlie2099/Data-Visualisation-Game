@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -47,7 +49,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        Results_Panel.SetActive(false);
+        Results_Panel.GetComponent<CanvasGroup>().alpha = 0;
 
     }
     private void Update()
@@ -56,8 +58,8 @@ public class GameManager : MonoBehaviour
         Current_Turn_Text_Holder.text = "ROUND " + _current_turn;
 
         //Update Score
-        P1_Score_Text_Holder.text = _P1_Score.ToString();
-        P2_Score_Text_Holder.text = _P2_Score.ToString();
+        P1_Score_Text_Holder.text = _P1_Score.ToString() + "/5";
+        P2_Score_Text_Holder.text = _P2_Score.ToString() + "/5";
 
     }
 
@@ -83,6 +85,12 @@ public class GameManager : MonoBehaviour
         }
         else if(_P2_Turn == true && _P1_Turn == false)
         {
+            var _All_Cities = GameObject.FindObjectsOfType(typeof(City));
+
+            for(int i = 0; i < _All_Cities.Length; i++)
+            {
+                _All_Cities[i].GetComponent<MeshCollider>().enabled = false;
+            }
             //Pass Turn
             _P1_Turn = true;
             _P2_Turn = false;
@@ -92,6 +100,7 @@ public class GameManager : MonoBehaviour
             P2_Crime_Count_Text_Holder.text = Selected_Crime_Count_Of_P2.ToString();
 
             //Start End State of the Game
+            AudioSource.PlayOneShot(Win_Sounds);
             StartCoroutine(EndState());
         }
     }
@@ -106,7 +115,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         
         Selection_Panel.SetActive(false);
-        Results_Panel.SetActive(true);
+        Results_Panel.GetComponent<CanvasGroup>().alpha = 1;
         P1Win.SetActive(false);
         P2Win.SetActive(false);
 
@@ -138,6 +147,7 @@ public class GameManager : MonoBehaviour
             _P2_Score++;
 
         }
+        //Calculate Win State
 
         yield return new WaitForSeconds(3f);
         _current_turn++;
@@ -147,11 +157,19 @@ public class GameManager : MonoBehaviour
         P2_Selected_City.text = "";
 
         Selection_Panel.SetActive(true);
-        Results_Panel.SetActive(false);
+        Results_Panel.GetComponent<CanvasGroup>().alpha = 0;
 
+        Wins_State();
 
         //Re activate all ui components
         Deactivate_and_Activate_Buttons();
+
+        var _All_Cities = GameObject.FindObjectsOfType(typeof(City));
+
+        for (int i = 0; i < _All_Cities.Length; i++)
+        {
+            _All_Cities[i].GetComponent<MeshCollider>().enabled = true;
+        }
     }
 
 
@@ -187,4 +205,48 @@ public class GameManager : MonoBehaviour
             Slider.enabled = true;
         }
     }
+
+    //Win State
+    [SerializeField] public Canvas Win_Canvas;
+    [SerializeField] public TMP_Text Who_Wins;
+    [SerializeField] public AudioClip Win_Sounds;
+    [SerializeField] public AudioSource AudioSource;
+    public void Wins_State()
+    {
+        if(_P1_Score >= 5)
+        {
+            Win_Canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            Who_Wins.text = "Player 1 Wins !";
+            StartCoroutine(Destroy_Win_State_Routine());
+        }
+        else if(_P2_Score >= 5)
+        {
+            Win_Canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+            Who_Wins.text = "Player 2 Wins !";
+            StartCoroutine(Destroy_Win_State_Routine());
+        }
+
+
+    }
+
+    IEnumerator Destroy_Win_State_Routine()
+    {
+        AudioSource.PlayOneShot(Win_Sounds);
+        Win_Canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+        Results_Panel.GetComponent<CanvasGroup>().alpha = 0;
+        Selection_Panel.GetComponent<CanvasGroup>().alpha = 0;
+        yield return new WaitForSeconds(5f);
+
+
+        //Nulify Scores
+        _P1_Score = 0;
+        _P2_Score = 0;
+
+        SceneManager.LoadScene("Menu");
+        Results_Panel.GetComponent<CanvasGroup>().alpha = 0;
+        Selection_Panel.GetComponent<CanvasGroup>().alpha = 1;
+        Win_Canvas.renderMode = RenderMode.WorldSpace;
+    }
+
+    
 }

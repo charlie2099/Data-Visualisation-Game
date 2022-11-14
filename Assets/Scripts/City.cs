@@ -1,6 +1,7 @@
 using Scriptables;
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -32,15 +33,19 @@ public class City : MonoBehaviour
 
 
 
-
-
+    [SerializeField] public String About_City_Data;
+    [SerializeField] public TMP_Text City_Special_Data_Text;
 
     //Turn Related 
     [SerializeField]
     private TurnSystem turn_system;
     public void OnMouseDown()
     {
-        //invoke_GUESSING_GAME();
+        Debug.Log("OBJECT NAME : " + this.gameObject.name);
+        if (isPointerOverUiElement())
+        {
+            City_Special_Data_Text.text = "A Fact About " + this.gameObject.name + " : " + About_City_Data;
+        }
     }
     private bool isPointerOverUiElement()
     {
