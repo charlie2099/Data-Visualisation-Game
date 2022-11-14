@@ -102,6 +102,7 @@ public class GameManager : MonoBehaviour
             //Start End State of the Game
             AudioSource.PlayOneShot(Win_Sounds);
             StartCoroutine(EndState());
+            Deactivate_and_Activate_Buttons();
         }
     }
 
@@ -165,8 +166,6 @@ public class GameManager : MonoBehaviour
 
         Wins_State();
 
-        //Re activate all ui components
-        Deactivate_and_Activate_Buttons();
 
         var _All_Cities = GameObject.FindObjectsOfType(typeof(City));
 
