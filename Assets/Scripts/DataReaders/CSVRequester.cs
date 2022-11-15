@@ -1,4 +1,5 @@
 using Scriptables;
+using TMPro;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static DataReaders.CSVReader;
+
 
 namespace DataReaders
 {
@@ -34,6 +36,12 @@ namespace DataReaders
         Gradient gradient;
         GradientColorKey[] colorKey;
         GradientAlphaKey[] alphaKey;
+
+        //UI
+        [SerializeField] public TMP_Text FromYear_UI;
+        [SerializeField] public TMP_Text CountyName_UI;
+        [SerializeField] public TMP_Text TotalCase_UI;
+
 
         //CSV Reader
         //[SerializeField] private CSVReader _CsvReader_Pull;
@@ -104,6 +112,7 @@ namespace DataReaders
                     {
                         case "Homicide":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Homicides: <color=orange>{cityData.totalHomicides}</color>");
+                            
                             if (Is_Game_Active)
                             {
                                 Game_Manager.Player_Chooses_City_For_Game(cityData.totalHomicides, cityData.name, "Homicides", cityData.year.ToString());
@@ -268,9 +277,15 @@ namespace DataReaders
                     {
                         case "Homicide":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Homicides: <color=orange>{cityData.totalHomicides}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Homicides: "+cityData.totalHomicides;
+                            }
+                            
                             if (Is_Visualization_Active)
                             {
-                                
                                 var _All_Cities = GameObject.FindObjectsOfType(typeof(City));
                                 Debug.Log(_All_Cities.Length);
                                 for(int i = 0; i < _All_Cities.Length; i++)
@@ -290,6 +305,13 @@ namespace DataReaders
                             break;
                         case "Harrassment":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Harassments: <color=orange>{cityData.totalHarrassments}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Harassments: "+cityData.totalHarrassments;
+                            }
+                            
                             if (Is_Visualization_Active)
                             {
 
@@ -311,6 +333,12 @@ namespace DataReaders
                             break;
                         case "Kidnapping":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Kidnappings: <color=orange>{cityData.totalKidnappings}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Kidnappings: "+cityData.totalKidnappings;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -332,6 +360,12 @@ namespace DataReaders
                             break;
                         case "Robbery":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Robberies: <color=orange>{cityData.totalRobberies}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Robberies: "+cityData.totalRobberies;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -353,6 +387,12 @@ namespace DataReaders
                             break;
                         case "Burglary":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Domestic Burglaries: <color=orange>{cityData.totalDomesticBurglaries}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Domestic Burglaries: "+cityData.totalDomesticBurglaries;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -374,6 +414,12 @@ namespace DataReaders
                             break;
                         case "Shoplifting":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Shoplifting: <color=orange>{cityData.totalShoplifting}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Shoplifting: "+cityData.totalShoplifting;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -395,6 +441,12 @@ namespace DataReaders
                             break;
                         case "Theft":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Theft offences: <color=orange>{cityData.totalTheft}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Theft offences: "+cityData.totalTheft;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -416,6 +468,12 @@ namespace DataReaders
                             break;
                         case "Arson":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Arson offences: <color=orange>{cityData.totalArson}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Arson offences: "+cityData.totalArson;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -437,6 +495,12 @@ namespace DataReaders
                             break;
                         case "Criminal damage":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Criminal Damage offences: <color=orange>{cityData.totalCriminalDamageOffences}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Criminal Damage offences: "+cityData.totalCriminalDamageOffences;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -458,6 +522,12 @@ namespace DataReaders
                             break;
                         case "Drug possession":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Drug Possession offences: <color=orange>{cityData.totalDrugOffences}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Drug Possession offences: "+cityData.totalDrugOffences;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -479,6 +549,12 @@ namespace DataReaders
                             break;
                         case "Weapon possession":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Weapon Possession offences: <color=orange>{cityData.totalWeaponPossession}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Weapon Possession offences: "+cityData.totalWeaponPossession;
+                            }
                             if (Is_Visualization_Active)
                             {
 
@@ -500,6 +576,12 @@ namespace DataReaders
                             break;
                         case "Total offences":
                             Debug.Log($"From year: <color=orange>{cityData.year}</color>, County Name: <color=orange>{cityData.name}</color>, Total Offences: <color=orange>{cityData.totalOffences}</color>");
+                            if (cityData.name == city.Data.cityName)
+                            {
+                                FromYear_UI.text = "From year: "+cityData.year;
+                                CountyName_UI.text = "City name: "+cityData.name;
+                                TotalCase_UI.text = "Total Offences: "+cityData.totalOffences;
+                            }
                             if (Is_Visualization_Active)
                             {
 
