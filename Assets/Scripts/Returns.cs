@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Returns : MonoBehaviour
 {
@@ -39,12 +40,14 @@ public class Returns : MonoBehaviour
         if (GameCavas.renderMode == RenderMode.ScreenSpaceCamera || GameCavas.renderMode == RenderMode.ScreenSpaceOverlay)
         {
             GameCavas.renderMode = RenderMode.WorldSpace;
-            SelectionCanvas.renderMode = RenderMode.ScreenSpaceCamera;  
+            SelectionCanvas.renderMode = RenderMode.ScreenSpaceCamera;
+            SceneManager.LoadScene("Game");  
         }
         else if (Visualization_Canvas.renderMode == RenderMode.ScreenSpaceCamera || Visualization_Canvas.renderMode == RenderMode.ScreenSpaceOverlay)
         {
             Visualization_Canvas.renderMode = RenderMode.WorldSpace;
             SelectionCanvas.renderMode = RenderMode.ScreenSpaceCamera;
+            SceneManager.LoadScene("Game");
         }
     }
 }
