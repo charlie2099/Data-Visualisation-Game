@@ -13,6 +13,7 @@ public class TurnSystem : MonoBehaviour
 
     public bool currently_busy;
 
+    [SerializeField]
     public bool p1_active = false;
     public bool p2_active = false;
 
@@ -63,20 +64,21 @@ public class TurnSystem : MonoBehaviour
     {
         if (p1_active)
         {
-            WHAT_TO_DO.text = "Player 1 \n Select the City";
+            WHAT_TO_DO.text = "Player 1 \nSelect the City/County";
         }
         if (p1_selecting)
         {
-            WHAT_TO_DO.text = "Player 1 \n Select possible air quality";
-        }
-        if (p2_active)
-        {
-            WHAT_TO_DO.text = "Player 2 \n Select the City";
+            WHAT_TO_DO.text = "Player 1 \nSelect possible percentage of crime rate";
         }
         if (p2_selecting)
         {
-            WHAT_TO_DO.text = "Player 2 \n Select possible air quality";
+            WHAT_TO_DO.text = "Player 2 \nSelect possible percentage of crime rate";
         }
+        if (p2_active)
+        {
+            WHAT_TO_DO.text = "Player 2 \nSelect the City/County";
+        }
+
 
         
     }
@@ -104,16 +106,17 @@ public class TurnSystem : MonoBehaviour
 
     public void nextTurn()
     {
+        Debug.Log("Next Turn !");
         if(this.current_turn%2 == 0)
         {
             clear_all();
-            //this.p1_active = true;
+            this.p1_active = true;
             this.current_turn++;
         }
         else if(this.current_turn%2 == 1)
         {
             clear_all();
-            //this.p2_active = true;
+            this.p2_active = true;
             this.current_turn++;
         }
     }
@@ -154,7 +157,7 @@ public class TurnSystem : MonoBehaviour
 
     public void is_Currently_Busy()
     {
-        if (p1_active == false && p2_active == false && p1_selecting == false && p2_selecting == false)
+        if (p1_selecting == false && p2_selecting == false)
         {
             currently_busy = false;
         }
